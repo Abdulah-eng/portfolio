@@ -1,32 +1,16 @@
 'use client';
-import Rotation from './components/rotation/page';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-export default function Home() {
+export default function Services() {
   const [show, setShow] = useState(false);
-  const [text, setText] = useState('');
-  const fullText = "Hi, myself Muhammad Abdullah ";
-
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      if (index < fullText.length) {
-        setText(fullText.slice(0, index + 1));
-        index++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 50);
-    return () => clearInterval(interval);
-  }, []);
 
   const changestate = () => {
     setShow(!show);
   };
 
-  // Animation Variants for Framer Motion
+  // Animation variants for Framer Motion
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -114,27 +98,60 @@ export default function Home() {
         </nav>
       </motion.div>
 
-      {/* Content Section */}
-      <div className="flex flex-col md:flex-row items-center justify-between mt-32 px-10 w-full">
-        
-        {/* Left: Animated Text */}
-        <div className="w-full md:w-1/2">
-          <p className="text-5xl md:text-6xl font-bold text-yellow-400 tracking-wide mb-4">
-            Muhammad Abdullah
-          </p>
-          <p className="text-2xl md:text-3xl font-semibold">
-            <span className="inline-block animate-fadeIn">{text}</span>
-            <span className="animate-blink">|</span>
-          </p>
-        </div>
+      {/* Services Content */}
+      <motion.div 
+        className="flex flex-col items-center justify-center h-screen px-10 pt-32" // Added pt-32 for padding-top
+        initial="hidden"
+        animate="visible"
+        variants={stagger}
+      >
+        <motion.h1 
+          className="text-5xl font-extrabold text-yellow-400 tracking-wide mb-10"
+          variants={fadeInUp}
+        >
+          Our Services
+        </motion.h1>
 
-        {/* Right: 3D Rotation Component */}
-        <div className="w-full md:w-1/2 flex justify-center">
-          <div className="relative flex justify-center items-center h-[40vh] md:h-[60vh] transform scale-75 md:scale-125 translate-z-20">
-            <Rotation />
-          </div>
-        </div>
-      </div>
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          variants={stagger}
+        >
+          
+          {/* Web Development Service Box */}
+          <motion.div 
+            className="bg-slate-800 w-72 h-64 border border-yellow-400 rounded-lg shadow-lg flex flex-col items-center justify-center text-white p-6 hover:shadow-yellow-400/50 transition-shadow duration-300"
+            variants={fadeInUp}
+          >
+            <h2 className="text-2xl font-bold text-yellow-400 mb-4">Web Development</h2>
+            <p className="text-center text-gray-300">
+              We create stunning, responsive, and high-performance websites tailored to your business needs.
+            </p>
+          </motion.div>
+
+          {/* UI/UX Design Service Box */}
+          <motion.div 
+            className="bg-slate-800 w-72 h-64 border border-yellow-400 rounded-lg shadow-lg flex flex-col items-center justify-center text-white p-6 hover:shadow-yellow-400/50 transition-shadow duration-300"
+            variants={fadeInUp}
+          >
+            <h2 className="text-2xl font-bold text-yellow-400 mb-4">UI/UX Design</h2>
+            <p className="text-center text-gray-300">
+              Our designs are user-centric, ensuring a seamless and engaging experience for your audience.
+            </p>
+          </motion.div>
+
+          {/* E-commerce Solutions Service Box */}
+          <motion.div 
+            className="bg-slate-800 w-72 h-64 border border-yellow-400 rounded-lg shadow-lg flex flex-col items-center justify-center text-white p-6 hover:shadow-yellow-400/50 transition-shadow duration-300"
+            variants={fadeInUp}
+          >
+            <h2 className="text-2xl font-bold text-yellow-400 mb-4">E-commerce Solutions</h2>
+            <p className="text-center text-gray-300">
+              We build scalable and secure e-commerce platforms to help you grow your online business.
+            </p>
+          </motion.div>
+
+        </motion.div>
+      </motion.div>
       
     </div>
   );
