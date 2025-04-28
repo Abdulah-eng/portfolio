@@ -41,7 +41,7 @@ export default function Aboutcard() {
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-50 transition-opacity duration-300 group-hover:opacity-70"
-        style={{ backgroundImage: "url('https://hjxjprpunqedpzlmryqd.supabase.co/storage/v1/object/public/bucketone//WhatsApp%20Image%202025-03-09%20at%2014.22.26.jpeg')" }}
+        style={{ backgroundImage: "url('https://lafqkspgkmbrbmxwcagj.supabase.co/storage/v1/object/public/bucketone/uploads/WhatsApp%20Image%202025-03-09%20at%2014.22.26.jpeg')" }}
       ></div>
 
       {/* Text Content */}
