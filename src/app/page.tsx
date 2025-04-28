@@ -27,10 +27,10 @@ export default function Home() {
   };
 
   // Animation Variants for Framer Motion
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
+  // const fadeInUp = {
+  //   hidden: { opacity: 0, y: 20 },
+  //   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  // };
 
   const stagger = {
     visible: { transition: { staggerChildren: 0.2 } },

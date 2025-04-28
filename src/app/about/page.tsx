@@ -20,9 +20,9 @@ export default function About() {
     visible: { transition: { staggerChildren: 0.2 } },
   };
 
-  const hoverScale = {
-    hover: { scale: 1.05, transition: { duration: 0.3 } },
-  };
+  // const hoverScale = {
+  //   hover: { scale: 1.05, transition: { duration: 0.3 } },
+  // };
 
   return (
     <div className="relative w-full min-h-screen bg-gradient-to-b from-gray-900 to-black text-white flex flex-col overflow-hidden">
