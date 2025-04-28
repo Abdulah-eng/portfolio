@@ -120,7 +120,7 @@ export default function About() {
           className="text-lg md:text-xl text-gray-300 font-light max-w-2xl leading-relaxed"
           variants={fadeInUp}
         >
-          Hello! I'm Muhammad Abdullah, a passionate developer and designer with a love for crafting immersive digital experiences. 
+          Hello! I&apos;m Muhammad Abdullah, a passionate developer and designer with a love for crafting immersive digital experiences. 
           I specialize in frontend and backend development, ensuring smooth user interactions and responsive designs.
         </motion.p>
         <motion.p
@@ -128,7 +128,7 @@ export default function About() {
           variants={fadeInUp}
         >
           My journey in tech has been driven by a curiosity to explore and innovate. 
-          Whether it's developing modern web applications or optimizing user interfaces, I thrive on solving complex challenges.
+          Whether it&apos;s developing modern web applications or optimizing user interfaces, I thrive on solving complex challenges.
         </motion.p>
 
         {/* Skills Section */}
@@ -179,7 +179,7 @@ export default function About() {
           className="mt-12"
           variants={fadeInUp}
         >
-          <h2 className="text-4xl font-bold text-yellow-400 mb-6">Let's Connect</h2>
+          <h2 className="text-4xl font-bold text-yellow-400 mb-6">Let&apos;s Connect</h2>
           <div className="flex space-x-6">
             {['LinkedIn', 'GitHub'].map((platform) => (
               <motion.a

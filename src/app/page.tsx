@@ -32,9 +32,9 @@ export default function Home() {
   //   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   // };
 
-  const stagger = {
-    visible: { transition: { staggerChildren: 0.2 } },
-  };
+  // const stagger = {
+  //   visible: { transition: { staggerChildren: 0.2 } },
+  // };
 
   return (
     <div className="relative w-full h-screen bg-gradient-to-b from-gray-900 to-black text-white flex flex-col">
